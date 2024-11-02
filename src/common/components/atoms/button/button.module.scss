@@ -1,0 +1,37 @@
+@use '@/assets/scss/variables/colors' as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 12px 32px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.primary {
+  color: $white;
+  background-color: #363331;
+}
+
+.secondary {
+  text-transform: uppercase;
+  background: $white;
+  color: #363331;
+  border: 1px solid #363331;
+}
+
+.tertiary {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: $disabled;
+  color: $button-disabled-text;
+}

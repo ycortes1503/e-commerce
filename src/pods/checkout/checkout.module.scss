@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &__title {
+    padding: 12px 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 56px;
+  }
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.button {
+  width: 260px;
+  height: 56px;
+}
+
+.total-amount {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}

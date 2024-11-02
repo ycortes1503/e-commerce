@@ -1,0 +1,41 @@
+@use '@/assets/scss/variables/colors' as *;
+
+.container {
+  display: flex;
+  gap: 40px;
+  width: 548px;
+  height: 324px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 0;
+  }
+
+  img {
+    align-self: center;
+    object-fit: contain;
+    width: 262px;
+    height: 324px;
+  }
+}
+
+.remove-button {
+  color: $red;
+  align-items: flex-start;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-transform: uppercase;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

@@ -1,0 +1,26 @@
+@use '@/assets/scss/variables/colors' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  &__search {
+    position: sticky;
+    z-index: 2;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0px;
+    background: $white;
+    gap: 12px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 100%;
+  }
+}

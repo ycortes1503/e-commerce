@@ -1,0 +1,73 @@
+@use '@/assets/scss/variables/colors' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  gap: 100px;
+
+  &__product-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      object-fit: contain;
+      width: 510px;
+      height: 630px;
+    }
+  }
+
+  &__spec-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__similar-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.spec-item {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  padding: 16px 0px;
+  border-top: 0.5px solid $grey;
+  border-bottom: 0.5px solid $grey;
+}
+
+.similar-items {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 380px;
+  height: 459px;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  &__middle {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}

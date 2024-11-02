@@ -1,0 +1,12 @@
+@use '@/assets/scss/variables/colors' as *;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  background: $white;
+}
