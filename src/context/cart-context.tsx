@@ -1,8 +1,8 @@
 import { LOCAL_STORAGE_CART_KEY } from '@/common/constants';
 import { CartItemModel, CartModel } from '@/core/models';
-import useLocalStorage from '@/common/hooks/local-storage.hook';
 import * as React from 'react';
 import _ from 'lodash';
+import { useLocalStorage } from '@/common/hooks';
 
 const CartContext = React.createContext<{
   totalItems: number;

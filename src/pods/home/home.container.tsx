@@ -3,7 +3,7 @@ import { HomeComponent } from './home.component';
 import { useHome } from './home.hook';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../core';
-import { useDebouncedText } from '../../common/hooks';
+import { useDebouncedText } from '@/common/hooks';
 
 export const HomeContainer = () => {
   const navigate = useNavigate();

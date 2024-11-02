@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function useLocalStorage<V>(key: string) {
+export function useLocalStorage<V>(key: string) {
   const [value, setValue] = React.useState<V>(() => {
     const storedValue = localStorage.getItem(key);
     return storedValue !== 'undefined' ? (JSON.parse(storedValue) as V) : undefined;
