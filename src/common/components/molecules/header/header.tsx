@@ -4,11 +4,15 @@ import { ReactComponent as BugFilledSVG } from '@/assets/images/svg/bug-filled.s
 import { useCartContext } from '@/context';
 import { IconButton, Typography } from '../../atoms';
 import * as styles from './header.module.scss';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { ROUTES } from '@/core';
 
 export const Header = () => {
   const navigate = useNavigate();
+  const { pathname: currentPath } = useLocation();
+
+  const isCheckoutPage = currentPath.includes(ROUTES.CHECKOUT);
+
   const { totalItems } = useCartContext();
   const hasCartProducts = totalItems > 0;
 
@@ -27,10 +31,12 @@ export const Header = () => {
       <IconButton onClick={handleGoHome}>
         <LogoHeaderSVG />
       </IconButton>
-      <IconButton onClick={handleGoCart}>
-        {bugIcon}
-        <Typography text={`${totalItems}`} />
-      </IconButton>
+      {!isCheckoutPage && (
+        <IconButton onClick={handleGoCart}>
+          {bugIcon}
+          <Typography text={`${totalItems}`} />
+        </IconButton>
+      )}
     </nav>
   );
 };
