@@ -5,7 +5,7 @@ import url from 'url';
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 export default {
-  context: path.resolve(__dirname, 'src'),
+  context: path.resolve(__dirname, './src'),
   entry: {
     app: './index.tsx',
     appStyles: './App.module.scss',
@@ -19,6 +19,7 @@ export default {
   output: {
     filename: 'js/[name].[chunkhash].js',
     clean: true,
+    publicPath: '/',
   },
   devServer: {
     historyApiFallback: true,
