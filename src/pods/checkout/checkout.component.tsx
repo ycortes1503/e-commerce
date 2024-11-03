@@ -39,15 +39,20 @@ export const CheckoutComponent = ({ onGoHome }: CheckoutComponentProps) => {
         })}
       </div>
       <div className={styles.container__footer}>
-        <Button variant="secondary" className={styles.button} label={LITERALS.continueShopping} onClick={onGoHome} />
+        <Button
+          variant="secondary"
+          className={styles['continue-shopping']}
+          label={LITERALS.continueShopping}
+          onClick={onGoHome}
+        />
         {!isCartEmpty && (
-          <div className={styles['footer-right']}>
-            <Typography fontSize="14" text={LITERALS.total} />
+          <>
             <div className={styles['total-amount']}>
+              <Typography fontSize="14" text={LITERALS.total} />
               <Typography fontSize="14" text={`${totalPrice}  ${CURRENCY}`} />
-              <Button className={styles.button} label={LITERALS.pay} />
             </div>
-          </div>
+            <Button className={styles['pay-button']} label={LITERALS.pay} />
+          </>
         )}
       </div>
     </div>
