@@ -1,7 +1,9 @@
+@use '@/assets/scss/variables/colors' as *;
+
 .container {
   display: flex;
   cursor: pointer;
   border: none;
-  background-color: transparent;
+  background-color: $white;
   align-items: center;
 }
