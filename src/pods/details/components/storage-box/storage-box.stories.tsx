@@ -11,6 +11,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    value: 'Storage value',
+    storageOptions: [
+      { capacity: '64GB', price: 100 },
+      { capacity: '128GB', price: 200 },
+    ],
+    onSelect: () => {},
   },
 };
