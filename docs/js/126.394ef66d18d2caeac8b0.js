@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[126],{126:(n,e,u)=>{u.r(e),u.d(e,{NotFoundScene:()=>s});var r=u(540),t=function(){return(0,r.jsx)("div",{children:"Page Not Found"})},c=function(){return(0,r.jsx)(t,{})},s=function(){return(0,r.jsx)(c,{})}}}]);
