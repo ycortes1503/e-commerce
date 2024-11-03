@@ -8,9 +8,10 @@ export interface DetailsComponentProps {
   productInfo: ProductInfo;
   onAddToCart: (cartItem: CartItemModel) => void;
   onGoHome: () => void;
+  onSeeDetails: (productId: string) => void;
 }
 
-export const DetailsComponent = ({ productInfo, onAddToCart, onGoHome }: DetailsComponentProps) => {
+export const DetailsComponent = ({ productInfo, onAddToCart, onGoHome, onSeeDetails }: DetailsComponentProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.container__back}>
@@ -19,7 +20,7 @@ export const DetailsComponent = ({ productInfo, onAddToCart, onGoHome }: Details
           <Typography text="BACK" />
         </IconButton>
       </div>
-      <CardProductInfo productInfo={productInfo} onAddToCart={onAddToCart} />
+      <CardProductInfo productInfo={productInfo} onAddToCart={onAddToCart} onSeeDetails={onSeeDetails} />
     </div>
   );
 };

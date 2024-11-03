@@ -17,6 +17,7 @@ export interface CheckoutComponentProps {
 
 export const CheckoutComponent = ({ onGoHome }: CheckoutComponentProps) => {
   const { products, totalItems, totalPrice } = useCartContext();
+  const isCartEmpty = products.length === 0;
 
   return (
     <div className={styles.container}>
@@ -39,13 +40,15 @@ export const CheckoutComponent = ({ onGoHome }: CheckoutComponentProps) => {
       </div>
       <div className={styles.container__footer}>
         <Button variant="secondary" className={styles.button} label={LITERALS.continueShopping} onClick={onGoHome} />
-        <div className={styles['footer-right']}>
-          <Typography fontSize="14" text={LITERALS.total} />
-          <div className={styles['total-amount']}>
-            <Typography fontSize="14" text={`${totalPrice}  ${CURRENCY}`} />
-            <Button className={styles.button} label={LITERALS.pay} />
+        {!isCartEmpty && (
+          <div className={styles['footer-right']}>
+            <Typography fontSize="14" text={LITERALS.total} />
+            <div className={styles['total-amount']}>
+              <Typography fontSize="14" text={`${totalPrice}  ${CURRENCY}`} />
+              <Button className={styles.button} label={LITERALS.pay} />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

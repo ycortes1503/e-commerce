@@ -33,8 +33,9 @@ export interface ProductInfoProps {
   productInfo: ProductInfo;
   className?: string;
   onAddToCart: (cartItem: CartItemModel) => void;
+  onSeeDetails: (productId: string) => void;
 }
-export const CardProductInfo = ({ productInfo, className, onAddToCart }: ProductInfoProps) => {
+export const CardProductInfo = ({ productInfo, className, onAddToCart, onSeeDetails }: ProductInfoProps) => {
   const defaultColor = productInfo?.colorOptions[0];
   const [selectedColor, setSelectedColor] = React.useState<ColorOption>(defaultColor);
   const [selectedStorage, setSelectedStorage] = React.useState<StorageOption>(null);
@@ -134,8 +135,11 @@ export const CardProductInfo = ({ productInfo, className, onAddToCart }: Product
           {similarProducts.map((product, index) => {
             const key = `${index}-${product.id}`;
 
-            return <Card key={key} product={product} />;
+            return <Card key={key} product={product} onClick={onSeeDetails} />;
           })}
+        </div>
+        <div className={styles['scrollbar-container']}>
+          <div className={styles['scrollbar-container__bar']} />
         </div>
       </div>
     </section>

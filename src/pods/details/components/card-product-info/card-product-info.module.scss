@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 60%;
+  width: 1200px;
+  height: 630px;
   gap: 100px;
 
   &__product-container {
@@ -29,6 +30,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    padding-bottom: 104px;
   }
 }
 
@@ -44,6 +46,18 @@
   display: flex;
   width: 100%;
   overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.scrollbar-container {
+  width: 100%;
+  background-color: $border-grey;
+
+  &__bar {
+    width: 150px;
+    height: 1px;
+    background-color: $black;
+  }
 }
 
 .product-info {

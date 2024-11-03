@@ -14,10 +14,22 @@ export const DetailsContainer = () => {
     navigate(ROUTES.HOME);
   };
 
+  const handleSeeDetails = (productId: string) => {
+    const path = `${ROUTES.DETAILS}/${productId}`;
+    window.open(path, '_blank', 'noopener,noreferrer');
+  };
+
   const handleAddToCart = (cartItem: CartItemModel) => {
     addToCart(cartItem);
     navigate(ROUTES.CHECKOUT);
   };
 
-  return <DetailsComponent productInfo={product} onGoHome={handleGoHome} onAddToCart={handleAddToCart} />;
+  return (
+    <DetailsComponent
+      productInfo={product}
+      onGoHome={handleGoHome}
+      onAddToCart={handleAddToCart}
+      onSeeDetails={handleSeeDetails}
+    />
+  );
 };

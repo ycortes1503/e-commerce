@@ -6,20 +6,14 @@ import { isNullOrUndefined } from '@/helpers';
 
 export interface CardProps {
   product: Product;
-  onClick?: (id: string) => void;
+  onClick: (id: string) => void;
 }
 
 export const Card = ({ product, onClick }: CardProps) => {
   const { id, basePrice, brand, imageUrl, name } = product;
 
-  const handleClick = () => {
-    if (!isNullOrUndefined(onClick)) {
-      onClick(id);
-    }
-  };
-
   return (
-    <div className={styles.container} onClick={handleClick}>
+    <div className={styles.container} onClick={() => onClick(id)}>
       <img src={imageUrl} alt={`Image of ${name}`} />
       <div className={styles.footer}>
         <Typography fontSize="10" className={styles.brand} text={brand} />
