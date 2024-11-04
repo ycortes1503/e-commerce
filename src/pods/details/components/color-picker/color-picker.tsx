@@ -31,6 +31,7 @@ export const ColorPicker = ({ colorOptions, onSelect }: ColorPickerProps) => {
           return (
             <div
               key={key}
+              data-testid={`color-option-${index}`}
               className={cx(styles['item'], {
                 [styles['item--selected']]: selectedColor.name === option.name && isNullOrUndefined(colorHovering),
               })}

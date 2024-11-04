@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ColorPicker /> should render correctly 1`] = `
+<div>
+  <div>
+    <div>
+      <div
+        class="undefined"
+        data-testid="color-option-0"
+      >
+        <div
+          style="background-color: rgb(255, 0, 0);"
+        />
+      </div>
+      <div
+        class=""
+        data-testid="color-option-1"
+      >
+        <div
+          style="background-color: rgb(0, 0, 255);"
+        />
+      </div>
+    </div>
+    <p
+      class=""
+      style="font-size: 12px;"
+    >
+      red
+    </p>
+  </div>
+</div>
+`;

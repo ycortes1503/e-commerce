@@ -1,24 +1,21 @@
 module.exports = {
   preset: 'ts-jest',
-  testEnvironment: 'node',
-  preset: 'ts-jest',
-  // testEnvironment: 'jsdom',
+  moduleDirectories: ['node_modules', 'src'],
+  testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/docs/'],
   moduleNameMapper: {
-    '@': '<rootDir>/src',
-    //   '^.+\\.css$': 'identity-obj-proxy',
+    '@/(.*)$': '<rootDir>/src/$1',
+    // '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+    //   '<rootDir>/__mocks__/fileMock.js',
+    '\\.(css|scss)$': '<rootDir>/__mocks__/styleMock.ts',
+    // '\\.scss$': 'identity-obj-proxy',
+    '\\.svg$': 'identity-obj-proxy',
   },
   transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-    // '\\.[jt]sx?$': 'babel-jest',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/fileTransformer.cjs',
+    '\\.[jt]sx?$': 'babel-jest',
   },
-  globals: {
-    'ts-jest': {
-      isolatedModules: true,
-    },
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
-  coveragePathIgnorePatterns: ['/node_modules/', '/dist/'],
 };

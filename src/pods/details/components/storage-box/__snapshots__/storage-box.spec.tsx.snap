@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`first should render correctly 1`] = `
+<div>
+  <div>
+    <div
+      class=""
+      data-testid="storage-option-0"
+    >
+      <p
+        class=""
+        style="font-size: 14px;"
+      >
+        64GB
+      </p>
+    </div>
+    <div
+      class=""
+      data-testid="storage-option-1"
+    >
+      <p
+        class=""
+        style="font-size: 14px;"
+      >
+        128GB
+      </p>
+    </div>
+  </div>
+</div>
+`;

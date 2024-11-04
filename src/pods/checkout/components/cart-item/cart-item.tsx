@@ -11,7 +11,7 @@ export interface CartItemProps {
 export const CartItem = ({ cartItem }: CartItemProps) => {
   const { removeFromCart } = useCartContext();
 
-  const { id, name, colorOption, storageOption } = cartItem;
+  const { name, colorOption, storageOption } = cartItem;
   const { name: colorName, imageUrl } = colorOption;
   const { capacity, price } = storageOption;
 

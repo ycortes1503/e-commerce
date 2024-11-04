@@ -25,6 +25,7 @@ export const StorageBox = ({ storageOptions, onSelect }: StorageBoxProps) => {
         return (
           <div
             key={key}
+            data-testid={`storage-option-${index}`}
             className={cx(styles.container__item, { [styles['container--selected']]: selected === option })}
             onClick={() => handleSelect(option)}
           >

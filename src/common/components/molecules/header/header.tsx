@@ -1,6 +1,6 @@
-import { ReactComponent as LogoHeaderSVG } from '@/assets/images/svg/logo-header.svg';
-import { ReactComponent as BugEmptySVG } from '@/assets/images/svg/bug-empty.svg';
-import { ReactComponent as BugFilledSVG } from '@/assets/images/svg/bug-filled.svg';
+import { ReactComponent as LogoHeaderSVG } from '../../../../assets/images/svg/logo-header.svg';
+import { ReactComponent as BugEmptySVG } from '../../../../assets/images/svg/bug-empty.svg';
+import { ReactComponent as BugFilledSVG } from '../../../../assets/images/svg/bug-filled.svg';
 import { useCartContext } from '@/context';
 import { IconButton, Typography } from '../../atoms';
 import * as styles from './header.module.scss';

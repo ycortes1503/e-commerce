@@ -1,5 +1,4 @@
-import { Product, ProductInfo } from '@/core/models';
-import { ProductDTO } from '@/infra';
+import { CartItemModel, Product, ProductInfo } from '@/core/models';
 
 export const mockProduct: Product[] = [
   {
@@ -252,4 +251,15 @@ export const mockProductInfo: ProductInfo = {
       imageUrl: 'http://prueba-tecnica-api-tienda-moviles.onrender.com/images/SMG-S23FE-purple.png',
     },
   ],
+};
+
+export const mockedCartItem: CartItemModel = {
+  id: 'ID-PRODUCT',
+  name: 'Titanio Azul',
+  colorOption: {
+    name: 'Midnight Purple',
+    hexCode: '#4B0082',
+    imageUrl: 'http://prueba-tecnica-api-tienda-moviles.onrender.com/images/APL-I15PM-titanio-azul.png',
+  },
+  storageOption: { capacity: '256GB', price: 200 },
 };
