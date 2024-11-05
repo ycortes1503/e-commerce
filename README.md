@@ -9,9 +9,8 @@ This application uses the following key technologies:
 - [Typescript 5](https://www.typescriptlang.org)
 - [Storybook 8](https://storybook.js.org)
 - [Sass](https://sass-lang.com)
-
-* [Jest](https://jestjs.io)
-* [React Testing Library](https://testing-library.com/docs)
+- [Jest](https://jestjs.io)
+- [React Testing Library](https://testing-library.com/docs)
 
 ## Description
 
@@ -66,7 +65,7 @@ test
 test:coverage
 ```
 
-Stary storybook
+Start storybook
 
 ```
 storybook
@@ -78,7 +77,7 @@ Project structure
 
 ![alt text](image.png)
 
-The architecture decisions were made in orde to have a clean, robust and scalable solution, following
+The architecture decisions were made in order to have a clean, robust and scalable solution, following
 an atomic design. The directory structure was build following the [Lemoncode](https://github.com/Lemoncode/lemon-front-estructura/blob/main/guia-lemon-front_v0_1_2.pdf) guide.
 
 ## Deploy
