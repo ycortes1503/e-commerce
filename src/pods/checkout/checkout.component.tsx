@@ -46,14 +46,12 @@ export const CheckoutComponent = ({ onGoHome }: CheckoutComponentProps) => {
           onClick={onGoHome}
         />
         {!isCartEmpty && (
-          <>
-            <div className={styles['total-amount']}>
-              <Typography fontSize="14" text={LITERALS.total} />
-              <Typography fontSize="14" text={`${totalPrice}  ${CURRENCY}`} />
-            </div>
-            <Button className={styles['pay-button']} label={LITERALS.pay} />
-          </>
+          <div className={styles['total-amount']}>
+            <Typography fontSize="14" text={LITERALS.total} />
+            <Typography fontSize="14" text={`${totalPrice}  ${CURRENCY}`} />
+          </div>
         )}
+        {!isCartEmpty && <Button className={styles['pay-button']} label={LITERALS.pay} />}
       </div>
     </div>
   );

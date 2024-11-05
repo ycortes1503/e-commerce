@@ -1,3 +1,5 @@
+$padding-mobile: 16px;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -47,6 +49,9 @@
   }
 
   .container__footer {
+    display: grid;
+    grid-template-areas: 'total total' 'continue pay';
+    gap: 12px;
     padding: 16px 0 24px 0;
 
     .total-amount {
@@ -54,14 +59,22 @@
       justify-content: space-between;
       padding-right: 0;
       order: -1;
+      grid-area: total;
     }
 
     .continue-shopping {
       font-size: 12px;
+      grid-area: continue;
+      height: 48px;
+      width: calc(100vw / 2 - ($padding-mobile * 2));
     }
 
     .pay-button {
       font-size: 12px;
+      grid-area: pay;
+      height: 48px;
+      width: calc(100vw / 2 - ($padding-mobile * 2));
+      justify-self: right;
     }
   }
 }
